@@ -1,0 +1,254 @@
+/* Main Catalog */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@300&display=swap');
+.mainCatalog {
+     display: flex;
+    flex-direction: row;
+    background-image: url(https://images.unsplash.com/photo-1614852206732-6728910dc175?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    min-height: 90.3vh;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 20px; /* Add padding for better spacing */
+    min-width: 250px;
+    height: 80vh;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding-right: 25px;
+    position: sticky;
+    top: 80px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background color */
+    z-index: 1;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(243, 243, 243);
+    padding: 15px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    color: #333; /* Adjust text color */
+    z-index: 1;
+}
+
+.toggle-search-bar-btn {
+    position: sticky;
+    top: 26px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Match the search bar background color */
+    color: #fff; /* Button text color */
+    padding: 10px 10px;
+    border: none;
+
+    cursor: pointer;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.toggle-search-bar-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darken the background on hover */
+}
+
+.toggle-search-bar-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Optional: Add box-shadow for a subtle lift effect */
+.toggle-search-bar-btn:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters h4{
+    font-size: 24px;
+    font-family: 'Lexend Zetta', sans-serif;
+    margin-left: 3%;
+    color: #fff;
+}
+
+/* Replace your existing .filter styles with the following */
+
+.filter {
+    background-color: #ffffff;
+    color: #1e1919;
+    padding: 12px 25px;
+    border: 2px solid #ccd1d6; /* Set a fixed border size and color */
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 600;
+    margin-left: 4%;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none; /* Remove default focus outline */
+}
+
+.filter:hover {
+    background-color: #b6bbc0; /* Darken the color on hover */
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+.filter:focus {
+    box-shadow: 0 0 0 3px rgba(204, 209, 214, 0.8); /* Add a gray outline when focused */
+}
+
+.filter:active {
+    transform: scale(0.95); /* Slightly shrink on click to provide feedback */
+}
+
+
+
+.reset-button{
+    margin: 4%;
+}
+.reset-filters{
+    background-color: #e2e2e2;
+    color: #1e1919;
+    padding: 12px 25px;
+    border: 2px solid #f4f5f6; /* Set a fixed border size and color */
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none; /* Remove default focus outline */
+}
+
+.reset-filters:hover{
+    background-color: #dd6d6d;
+    color: #000000;
+    padding: 12px 25px;
+    border: 2px solid #ffffff; /* Set a fixed border size and color */
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.6s, transform 0.5s, box-shadow 0.6s;
+    outline: none; /* Remove default focus outline */
+
+}
+/* Catalog Display */
+.main-books {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    text-align: center;
+    
+}
+
+.catalog-book {
+    height: auto;
+    max-height:500px;
+    width: 280px;
+    margin: 5%;
+    /* margin-left: 5%; */
+    background-color: #ffffff51;
+    color: #fff;
+    border-radius: 5%;
+    transition: transform 1s; 
+    padding: 1%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
+}
+
+.main-books img {
+    width: 200px;
+    max-width: 200px;
+    height: 280px;
+    margin-left: 3%;
+    margin-top: 4%;
+    border-radius: 7px;
+    filter: drop-shadow(5px 5px 5px rgb(72, 70, 70));
+    transition: filter 0.25s, transform 0.25s;
+}
+
+.main-books p {
+    font-family: 'Lexend Zetta', sans-serif;}
+.main-books h3 {
+    font-family: 'Lexend Zetta', sans-serif;}
+
+.main-books img:hover {
+    filter: drop-shadow(0px 0px 35px rgb(255, 255, 255));
+    transform: scale(1.02);
+    transition: filter 0.5s, transform 0.5s;
+    border-style:inherit;
+}
+
+
+.ViewMore {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust top margin as needed */  
+}
+
+.ViewMore {
+    display: flex;
+    justify-content: center;
+}
+
+.ViewMore button {
+    padding: 12px 30px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #f29ef2, #2b6afe);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+  
+}
+
+.ViewMore button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.ViewMore button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.ViewMore button:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.ViewMore button:focus {
+    outline: none;
+}
+
+
+
+
+
+

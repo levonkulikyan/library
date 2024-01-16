@@ -1,0 +1,92 @@
+/* Original footer styles */
+
+footer {
+  background-color: #fffaff;
+  padding: 20px;
+  color: #555;
+  position: relative; /* Corrected spelling error */
+  width: auto;
+  bottom: 0; /* Adjusted positioning */
+  overflow: hidden;
+  font-family: "picsart-academy-font", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  margin-left: 20%;
+}
+
+.column {
+  flex: 1;
+  margin-bottom: 20px; /* Added margin for spacing between columns */
+}
+
+.column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-link,
+.adress-link {
+  text-decoration: none;
+  color: #555;
+  font-size: 18px;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.adress-link:hover{
+  color: #007bff;
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+/* Social logo styles remain unchanged */
+
+#socialLogo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin: 2px;
+ 
+  transition: filter 0.3s ease;
+}
+
+#socialLogo:hover {
+
+  width: 40px;
+  height: 40px;
+  transform: rotate(360deg);
+  transition: 2s;
+}
+
+/* Media query for responsiveness */
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .contact-info {
+    flex-direction: column; /* Align items vertically on smaller screens */
+  }
+
+  .column {
+    flex: 1 0 100%; /* Full width for columns on smaller screens */
+    margin-bottom: 10px;
+  }
+
+  .column h3 {
+    font-size: 14px; /* Reduced font size for headings */
+  }
+
+  .footer-link,
+  .adress-link {
+    font-size: 14px; /* Reduced font size for links */
+  }
+}

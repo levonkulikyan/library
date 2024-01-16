@@ -1,0 +1,128 @@
+
+header {
+  max-height: 60px; 
+  height: 8%; 
+  margin: 0;
+}
+
+/* Style the header */
+#site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(172, 172, 172, 0.3);
+  transition: background-color 0.7s ease; 
+  transition: 0.5s;
+  padding: 1% 1%;
+  z-index: 1000;
+  max-height: 50px;
+}
+
+#site-header:hover {
+  background-color: rgba(255, 255, 255, 1); 
+  color: rgb(0, 0, 0);
+}
+
+/* Hidden header effect */
+.header-hidden {
+  transform: translateY(-95%);
+  transition: transform 1s;
+}
+
+/* Style the logo */
+.logo img {
+  max-height: 50%;
+  height: 60px;
+  display: inline;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: color 0.3s, background-color 0.2s;
+  border-radius: 20px;
+  padding: 2px 2px;
+}
+
+nav ul li a:hover {
+  color: #090909;
+  text-shadow: 0 0 5px #7f0dea,
+  0 0 25px #0022ff,
+  0 0 50px #0855ed,
+  0 0 100px #d900ff;
+}
+
+nav ul li button.logOut-btn {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: color 0.3s, background-color 0.2s;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+}
+
+nav ul li button.logOut-btn:hover {
+  color: #090909;
+  text-shadow: 0 0 5px #7f0dea, 0 0 25px #0022ff, 0 0 50px #0855ed, 0 0 100px #d900ff;
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 480px) {
+  header {
+    max-height: 40px; /* Adjusted height for smartphones */
+    height: 8%; /* Adjusted height for smartphones */
+  }
+
+  #site-header {
+    padding: 1% 3%; /* Adjusted padding for smartphones */
+  }
+
+  .logo img {
+    height: 40px; /* Adjusted logo size for smartphones */
+  }
+
+  nav ul {
+    flex-direction: row; /* Stacking navigation items vertically */
+    
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 0px;
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Decreased font size further for smartphones */
+    padding: 8px 5px; /* Adjusted padding for better touch interaction */
+    font-weight: bold;
+   
+  }
+}
+
